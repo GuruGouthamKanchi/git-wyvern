@@ -210,7 +210,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             pal.name,
             pal.title,
             pal.name,
-            if is_patrol { "420" } else { "352" },
+            if is_patrol { "580" } else { "480" },
             pal.name,
             pal.series,
             pal.rider,

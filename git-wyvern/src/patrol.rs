@@ -16,7 +16,8 @@ pub struct Ember {
 
 /// Calculate base flight trajectory on the enlarged 640x640 sky arena (doubled space).
 /// Center of the arena is (320.0, 320.0).
-/// Every single one of the 16 canon dragons has its own mathematically distinct flight path.
+/// Every single one of the 16 canon dragons has its own mathematically distinct flight path,
+/// precisely tuned so that massive wings and elongated tails never touch or cross the boundaries.
 fn get_base_trajectory_pos(key: &str, tau: f32) -> (f32, f32) {
     let cx = 320.0;
     let cy = 320.0;
@@ -24,109 +25,109 @@ fn get_base_trajectory_pos(key: &str, tau: f32) -> (f32, f32) {
     match key {
         "drogon" => {
             // Drogon (The Black Dread Reborn): Aggressive Lemniscate of Gerono (Power Figure-8)
-            let x = cx + 152.0 * tau.sin();
-            let y = cy + 100.0 * (2.0 * tau).sin();
+            let x = cx + 118.0 * tau.sin();
+            let y = cy + 78.0 * (2.0 * tau).sin();
             (x, y)
         }
         "rhaegal" => {
             // Rhaegal (The Jade Serpent): Sinister 3:2 Lissajous serpentine canyon weave
-            let x = cx + 140.0 * tau.cos() + 32.0 * (3.0 * tau).cos();
-            let y = cy + 96.0 * (2.0 * tau).sin();
+            let x = cx + 108.0 * tau.cos() + 25.0 * (3.0 * tau).cos();
+            let y = cy + 74.0 * (2.0 * tau).sin();
             (x, y)
         }
         "viserion" => {
             // Viserion (The Golden Frost): Elegant breathing thermal spiral glide
-            let r_x = 140.0 + 24.0 * tau.sin();
-            let r_y = 96.0 + 16.0 * tau.sin();
+            let r_x = 108.0 + 18.0 * tau.sin();
+            let r_y = 74.0 + 12.0 * tau.sin();
             let x = cx + r_x * tau.cos();
             let y = cy + r_y * tau.sin();
             (x, y)
         }
         "wight_viserion" => {
             // Wight Viserion (The Undead Ice Dragon): Erratic, jagged stutter-loop with unnatural pivots
-            let x = cx + 140.0 * tau.cos() - 32.0 * (2.0 * tau).sin();
-            let y = cy + 88.0 * tau.sin() + 32.0 * (2.0 * tau).cos();
+            let x = cx + 108.0 * tau.cos() - 25.0 * (2.0 * tau).sin();
+            let y = cy + 68.0 * tau.sin() + 25.0 * (2.0 * tau).cos();
             (x, y)
         }
         "caraxes" => {
             // Caraxes (The Blood Wyrm): Sinuous elongated ribbon wave with secondary undulating ripple
-            let x = cx + 160.0 * tau.sin();
-            let y = cy + 96.0 * (2.0 * tau).sin() + 16.0 * (4.0 * tau).sin();
+            let x = cx + 124.0 * tau.sin();
+            let y = cy + 74.0 * (2.0 * tau).sin() + 12.0 * (4.0 * tau).sin();
             (x, y)
         }
         "vhagar" => {
             // Vhagar (The Queen of All Dragons): Colossal wide perimeter sweep with low ground stoop
-            let x = cx + 164.0 * tau.cos();
-            let y = cy + 112.0 * tau.sin() - 28.0 * (2.0 * tau).sin();
+            let x = cx + 112.0 * tau.cos();
+            let y = cy + 76.0 * tau.sin() - 18.0 * (2.0 * tau).sin();
             (x, y)
         }
         "syrax" => {
             // Syrax (The Golden Queen): Aristocratic regal teardrop loop
-            let x = cx + 148.0 * tau.cos() * (1.0 - 0.28 * tau.sin());
-            let y = cy + 100.0 * tau.sin();
+            let x = cx + 105.0 * tau.cos() * (1.0 - 0.20 * tau.sin());
+            let y = cy + 74.0 * tau.sin();
             (x, y)
         }
         "meleys" => {
             // Meleys (The Red Queen): Supersonic ultra-flat oval interceptor path
-            let x = cx + 172.0 * tau.cos();
-            let y = cy + 72.0 * tau.sin();
+            let x = cx + 120.0 * tau.cos();
+            let y = cy + 54.0 * tau.sin();
             (x, y)
         }
         "sunfyre" => {
             // Sunfyre (The Golden Dragon): Trifolium 3-petal butterfly aerobatic loop
-            let r = 120.0 + 36.0 * (3.0 * tau).cos();
+            let r = 85.0 + 24.0 * (3.0 * tau).cos();
             let x = cx + r * tau.cos();
             let y = cy + r * tau.sin() * 0.74;
             (x, y)
         }
         "vermithor" => {
             // Vermithor (The Bronze Fury): Heavy horseshoe brute patrol with deep predatory stoop
-            let x = cx + 148.0 * tau.cos();
-            let y = cy + 92.0 * tau.sin() + 32.0 * (2.0 * tau).cos();
+            let x = cx + 108.0 * tau.cos();
+            let y = cy + 68.0 * tau.sin() + 22.0 * (2.0 * tau).cos();
             (x, y)
         }
         "silverwing" => {
             // Silverwing (The Pale Lady): Regal horizontal Lemniscate of Bernoulli (Infinity loop)
             let den = 1.0 + tau.sin() * tau.sin();
-            let x = cx + 156.0 * tau.cos() / den;
-            let y = cy + 104.0 * tau.sin() * tau.cos() / den;
+            let x = cx + 116.0 * tau.cos() / den;
+            let y = cy + 76.0 * tau.sin() * tau.cos() / den;
             (x, y)
         }
         "seasmoke" => {
             // Seasmoke (The Pale Ghost): Coastal surf-skimming oval with upward thermal hook
-            let x = cx + 148.0 * tau.cos() + 24.0 * (2.0 * tau).sin();
-            let y = cy + 84.0 * tau.sin() - 28.0 * (1.0 - tau.cos());
+            let x = cx + 108.0 * tau.cos() + 16.0 * (2.0 * tau).sin();
+            let y = cy + 62.0 * tau.sin() - 20.0 * (1.0 - tau.cos());
             (x, y)
         }
         "sheepstealer" => {
             // Sheepstealer (The Wild Brown Dragon): Erratic moorland zigzag scavenger loop
-            let x = cx + 140.0 * tau.cos() + 36.0 * (3.0 * tau).cos();
-            let y = cy + 88.0 * tau.sin() + 32.0 * (3.0 * tau).sin();
+            let x = cx + 104.0 * tau.cos() + 25.0 * (3.0 * tau).cos();
+            let y = cy + 65.0 * tau.sin() + 22.0 * (3.0 * tau).sin();
             (x, y)
         }
         "balerion" => {
             // Balerion (The Black Dread): Colossal apocalyptic eclipse sweep spanning maximum sky
-            let x = cx + 172.0 * tau.cos() + 24.0 * (2.0 * tau).cos();
-            let y = cy + 112.0 * tau.sin() - 36.0 * (2.0 * tau).sin();
+            let x = cx + 118.0 * tau.cos() + 16.0 * (2.0 * tau).cos();
+            let y = cy + 76.0 * tau.sin() - 22.0 * (2.0 * tau).sin();
             (x, y)
         }
         "moondancer" => {
             // Moondancer (The Quick-Wing): Falcon-like 4-cusp astroid canyon darting
             let c = tau.cos();
             let s = tau.sin();
-            let x = cx + 152.0 * c * (0.68 + 0.32 * (2.0 * c * c - 1.0));
-            let y = cy + 100.0 * s * (0.68 - 0.32 * (2.0 * c * c - 1.0));
+            let x = cx + 118.0 * c * (0.68 + 0.32 * (2.0 * c * c - 1.0));
+            let y = cy + 78.0 * s * (0.68 - 0.32 * (2.0 * c * c - 1.0));
             (x, y)
         }
         "tessarion" => {
             // Tessarion (The Blue Queen): Swift acrobatic 4-leaf cloverleaf bank patrol
-            let x = cx + 148.0 * tau.cos() + 36.0 * (2.0 * tau).sin();
-            let y = cy + 96.0 * tau.sin() + 32.0 * (2.0 * tau).cos();
+            let x = cx + 115.0 * tau.cos() + 28.0 * (2.0 * tau).sin();
+            let y = cy + 74.0 * tau.sin() + 25.0 * (2.0 * tau).cos();
             (x, y)
         }
         _ => {
-            let x = cx + 148.0 * tau.cos();
-            let y = cy + 96.0 * tau.sin();
+            let x = cx + 115.0 * tau.cos();
+            let y = cy + 74.0 * tau.sin();
             (x, y)
         }
     }
@@ -187,8 +188,8 @@ pub fn render_patrol_frame(
     // -----------------------------------------------------------------
     let h1 = seed.wrapping_mul(1664525).wrapping_add(1013904223);
     let h2 = h1.wrapping_mul(1664525).wrapping_add(1013904223);
-    let target_x = 140.0 + ((h1 >> 8) % 360) as f32;
-    let target_y = 140.0 + ((h2 >> 8) % 360) as f32;
+    let target_x = 215.0 + ((h1 >> 8) % 210) as f32;
+    let target_y = 215.0 + ((h2 >> 8) % 210) as f32;
 
     let t_spawn = 0.50;  // No prey during first half of loop!
     let t_alert = 0.60;
@@ -201,7 +202,7 @@ pub fn render_patrol_frame(
     let prey_heading = base_svy.atan2(base_svx) + 0.45;
     let prey_fx = prey_heading.cos();
     let prey_fy = prey_heading.sin();
-    let prey_speed = 52.0;
+    let prey_speed = 40.0;
 
     let (prey_x, prey_y) = if t < t_strike {
         let dt_strike = t_strike - t;
@@ -273,7 +274,7 @@ pub fn render_patrol_frame(
         let dive_depth = (u_hunt * PI).sin().powf(1.6);
 
         let alt_factor = (1.0 - dive_depth * 0.97).max(0.03);
-        let scale_mult = 1.0 + dive_depth * 0.28;
+        let scale_mult = 1.0 + dive_depth * 0.16;
 
         let u_reach = if (0.60..=0.74).contains(&t) {
             ((t - 0.60) / 0.14 * PI).sin().powf(1.4)
@@ -308,6 +309,9 @@ pub fn render_patrol_frame(
     } else {
         (raw_px, raw_py, raw_vx, raw_vy, 1.0, 1.0, 0.0)
     };
+
+    let px = px.clamp(170.0, 470.0);
+    let py = py.clamp(165.0, 475.0);
 
     let heading = vy.atan2(vx);
 
@@ -376,11 +380,11 @@ pub fn render_patrol_frame(
     };
 
     let patrol_scale_mult = match pal.key {
-        "vhagar" => 1.52,
-        "balerion" => 1.56,
-        "caraxes" => 1.48,
-        "moondancer" => 1.44,
-        _ => 1.48,
+        "vhagar" => 1.10,
+        "balerion" => 1.12,
+        "caraxes" => 1.08,
+        "moondancer" => 1.06,
+        _ => 1.08,
     };
     let patrol_scale = patrol_scale_mult * scale * dive_scale_mult;
 
