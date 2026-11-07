@@ -4,7 +4,7 @@
 ### 🔴 Active Companion: **Drogon** — *The Black Dread Reborn*
 
 <a href="https://github.com/topics/game-of-thrones">
-  <img src="dragons/companion.gif" alt="Drogon Wyvern" width="352"/>
+  <img src="dragons/companion.gif" alt="Drogon Wyvern" width="580"/>
 </a>
 
 ```text
@@ -12,9 +12,9 @@
 │  🐲 Companion   : Drogon         Series  : Game of Thrones           │
 │  👑 Bonded Rider: Daenerys Targaryen Faction : House Targaryen           │
 │  🔥 Breath Type : Blood-Red Dragonfire                            │
-│  ✨ Growth Stage: Stage 1: Dragon Egg                             │
-│  ⚡ Power Level : 0     XP        Commits : 0     (  0% to Next Level) │
-│  📈 Growth Bar  : [░░░░░░░░░░░░░░░░] (0% to Stage 2)            │
+│  ✨ Growth Stage: Stage 3: Apex Soaring Dread (Aerial Patrol)     │
+│  ⚡ Power Level : 9900  XP        Commits : 150   (100% to Next Level) │
+│  📈 Growth Bar  : [████████████████] (Max Apex Reached!)        │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 > *"The largest and most ferocious of Daenerys's brood. Pitch-black hide with blood-red wing ribbing."*
@@ -74,7 +74,7 @@ Inspired by the dorsal top-down view and 1:1 pixel aesthetic of `git-koi`, **Git
 
 | Drogon: Lemniscate of Gerono & Flame-Roast | Caraxes: Sinuous Ribbon Wave & Viper Strike |
 |:---:|:---:|
-| <img src="dragons/drogon_patrol.gif" width="380"/><br/>*Bilateral delta wings &bull; Figure-8 power dive &bull; Aerial sheep flame-roast* | <img src="dragons/caraxes_patrol.gif" width="380"/><br/>*Mutated serpentine S-neck &bull; Webbed ankle rudders &bull; Running boar strike* |
+| <img src="dragons/drogon_patrol.gif" width="480"/><br/>*Bilateral delta wings &bull; Figure-8 power dive &bull; Aerial sheep flame-roast* | <img src="dragons/caraxes_patrol.gif" width="480"/><br/>*Mutated serpentine S-neck &bull; Webbed ankle rudders &bull; Running boar strike* |
 
 </div>
 

@@ -36,20 +36,18 @@ fn make_progress_bar(pct: u32, length: usize) -> String {
 fn render_patrol(dragon_key: &str, stage_id: u32, out_path: &Path) -> Result<(), Box<dyn std::error::Error>> {
     let pal = get_palette(dragon_key).expect("Palette found");
     let total_frames = 144; // 144 extended cinematic frames for empty-sky dragonfire and procedural prey hunt
-    let mut frames_upscaled = Vec::with_capacity(total_frames);
+    let mut frames = Vec::with_capacity(total_frames);
     let mut embers: Vec<Ember> = Vec::new();
 
     let scale = if stage_id < 3 { 0.85 } else { 1.15 };
 
     for f in 0..total_frames {
-        let mut canvas_320 = Canvas::new(320, 320);
-        render_patrol_frame(&pal, f, total_frames, scale, &mut canvas_320, &mut embers);
-        // 2x Nearest-Neighbor upscale matching git-koi's integer clustering (produces 640x640 frame)
-        let canvas_640 = canvas_320.upscale_2x();
-        frames_upscaled.push(canvas_640);
+        let mut canvas_640 = Canvas::new(640, 640);
+        render_patrol_frame(&pal, f, total_frames, scale, &mut canvas_640, &mut embers);
+        frames.push(canvas_640);
     }
 
-    save_animated_gif(&frames_upscaled, 5, out_path)?;
+    save_animated_gif(&frames, 5, out_path)?;
     Ok(())
 }
 
