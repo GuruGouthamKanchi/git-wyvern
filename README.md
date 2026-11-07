@@ -4,7 +4,7 @@
 ### 🔴 Active Companion: **Drogon** — *The Black Dread Reborn*
 
 <a href="https://github.com/topics/game-of-thrones">
-  <img src="dragons/companion.gif" alt="Drogon Wyvern" width="352"/>
+  <img src="dragons/companion.gif" alt="Drogon Wyvern" width="480"/>
 </a>
 
 ```text
@@ -13,8 +13,8 @@
 │  👑 Bonded Rider: Daenerys Targaryen Faction : House Targaryen           │
 │  🔥 Breath Type : Blood-Red Dragonfire                            │
 │  ✨ Growth Stage: Stage 1: Dragon Egg                             │
-│  ⚡ Power Level : 70    XP        Commits : 2     (  6% to Next Level) │
-│  📈 Growth Bar  : [█░░░░░░░░░░░░░░░] (6% to Stage 2)            │
+│  ⚡ Power Level : 140   XP        Commits : 4     ( 13% to Next Level) │
+│  📈 Growth Bar  : [██░░░░░░░░░░░░░░] (13% to Stage 2)           │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 > *"The largest and most ferocious of Daenerys's brood. Pitch-black hide with blood-red wing ribbing."*
