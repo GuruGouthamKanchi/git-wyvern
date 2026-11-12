@@ -13,8 +13,8 @@
 │  👑 Bonded Rider: Daenerys Targaryen Faction : House Targaryen           │
 │  🔥 Breath Type : Blood-Red Dragonfire                            │
 │  ✨ Growth Stage: Stage 1: Dragon Egg                             │
-│  ⚡ Power Level : 280   XP        Commits : 8     ( 26% to Next Level) │
-│  📈 Growth Bar  : [████░░░░░░░░░░░░] (26% to Stage 2)           │
+│  ⚡ Power Level : 315   XP        Commits : 9     ( 30% to Next Level) │
+│  📈 Growth Bar  : [█████░░░░░░░░░░░] (30% to Stage 2)           │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 > *"The largest and most ferocious of Daenerys's brood. Pitch-black hide with blood-red wing ribbing."*
